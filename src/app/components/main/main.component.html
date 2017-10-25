@@ -1,0 +1,19 @@
+<div class="container" [class]="currentTheme.className">
+
+  <header class="indigo-pink">
+    <app-toolbar></app-toolbar>
+  </header>
+
+  <mat-sidenav-container class="workbench">
+
+    <mat-sidenav mode="side" opened="true" #sidenav>
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+
+    <div>
+      <button type="button" mat-button (click)="sidenav.open()">
+        Open sidenav
+      </button>
+    </div>
+  </mat-sidenav-container>
+</div>

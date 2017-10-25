@@ -1,0 +1,33 @@
+.tree-container {
+  margin-left: 15px;
+  .tree-item {
+    font-size: 13px;
+    margin: 8px 0 8px 0;
+  }
+  mat-icon {
+    font-size: 17px;
+    vertical-align: top;
+  }
+}
+
+.tree-title {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  .triangle {
+    font-size: 20px;
+    position: absolute;
+    left: -20px;
+    top: -2px;
+    transform: rotate(-90deg);
+    &.open {
+      transform: rotate(-45deg);
+    }
+  }
+  span {
+    margin-left: 5px;
+    white-space: nowrap;
+  }
+}

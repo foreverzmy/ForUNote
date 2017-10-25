@@ -1,0 +1,15 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon>format_color_fill</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu" xPosition="before" yPosition="below">
+  <mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let theme of themes">
+      <div mat-menu-item class="theme-picker-swatch" (click)="changeTheme(theme)">
+        <button mat-mini-fab [style.background]="theme.color">
+          <mat-icon *ngIf="currentTheme === theme">favorite</mat-icon>
+        </button>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-menu>

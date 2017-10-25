@@ -1,0 +1,7 @@
+@include mat-core();
+$deeppurple-amber-primary: mat-palette($mat-deep-purple);
+$deeppurple-amber-accent: mat-palette($mat-amber, A200, A100, A400);
+$deeppurple-amber-theme: mat-light-theme($deeppurple-amber-primary, $deeppurple-amber-accent);
+.deeppurple-amber {
+  @include angular-material-theme($deeppurple-amber-theme);
+}

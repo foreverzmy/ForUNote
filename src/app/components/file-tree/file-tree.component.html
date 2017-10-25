@@ -1,0 +1,11 @@
+<ul class="tree-container">
+  <li *ngFor='let tree of trees' class="tree-item">
+    <div class="tree-title">
+      <mat-icon class="triangle open" *ngIf="tree.type==='folder'">arrow_drop_down</mat-icon>
+      <mat-icon *ngIf="tree.type==='folder'">folder_open</mat-icon>
+      <mat-icon *ngIf="tree.type==='file'">insert_drive_file</mat-icon>
+      <span>{{tree.name}}</span>
+    </div>
+    <app-file-tree *ngIf="tree.children" [trees]="tree.children"></app-file-tree>
+  </li>
+</ul>
