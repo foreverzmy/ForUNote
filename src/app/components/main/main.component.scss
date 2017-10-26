@@ -1,4 +1,8 @@
 .workbench {
   width: 100vw;
   height: calc(100vh - 45px);
+  .workspace {
+    height: 100%;
+    overflow: hidden;
+  }
 }

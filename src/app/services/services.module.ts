@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ThemeService } from './theme/theme.service';
+import { CodeMirrorService } from './code-mirror/code-mirror.service';
 
 @NgModule({
   imports: [
@@ -10,7 +11,8 @@ import { ThemeService } from './theme/theme.service';
   ],
   declarations: [],
   providers: [
-    ThemeService
+    ThemeService,
+    CodeMirrorService
   ],
   exports: [],
 })

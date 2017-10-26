@@ -20,6 +20,10 @@ body {
   position: absolute;
 }
 
+* {
+  transition-property: none;
+}
+
 div,
 span,
 object,

@@ -7,7 +7,10 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ThemePickerComponent } from './theme-picker/theme-picker.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FileTreeComponent } from './file-tree/file-tree.component';
-
+import { WorkspaceComponent } from './workspace/workspace.component';
+import { EditorComponent } from './editor/editor.component';
+import { PreviewComponent } from './preview/preview.component';
+import { CodeMirrorComponent } from './code-mirror/code-mirror.component';
 @NgModule({
   imports: [
     CoreModule
@@ -17,7 +20,11 @@ import { FileTreeComponent } from './file-tree/file-tree.component';
     ToolbarComponent,
     ThemePickerComponent,
     SidebarComponent,
-    FileTreeComponent
+    FileTreeComponent,
+    WorkspaceComponent,
+    EditorComponent,
+    PreviewComponent,
+    CodeMirrorComponent
   ],
   providers: [
   ],
