@@ -26,8 +26,8 @@ export class MarkedService {
 
   private init() {
     this.renderer = new Marked.Renderer();
-    // this.renderer.link = (href, title, text) => this.handleLink(href, title, text);
-    // this.renderer.image = (href, title, text) => this.handleImage(href, title, text);
+    this.renderer.link = (href, title, text) => this.handleLink(href, title, text);
+    this.renderer.image = (href, title, text) => this.handleImage(href, title, text);
     this.renderer.code = function (code, language) {
       return '<pre><code class="hljs ' + language + '">' +
         hljs.highlight(language, code).value +
@@ -49,6 +49,14 @@ export class MarkedService {
 
   public parse(text: string) {
     return this.marked.parse(text);
+  }
+
+  private handleLink(href, title, text) {
+    return `<a href=${href} title=${title}>${text}</a>`;
+  }
+
+  private handleImage(href, title, text) {
+    return `<img src=${href} title=${text}/><i style='margin:8px auto 0 auto;display:table'>${text}</i>`;
   }
 
   // 代码高亮
