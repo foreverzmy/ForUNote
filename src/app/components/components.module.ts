@@ -11,6 +11,8 @@ import { WorkspaceComponent } from './workspace/workspace.component';
 import { EditorComponent } from './editor/editor.component';
 import { PreviewComponent } from './preview/preview.component';
 import { CodeMirrorComponent } from './code-mirror/code-mirror.component';
+import { MarkedComponent } from './marked/marked.component';
+
 @NgModule({
   imports: [
     CoreModule
@@ -24,7 +26,8 @@ import { CodeMirrorComponent } from './code-mirror/code-mirror.component';
     WorkspaceComponent,
     EditorComponent,
     PreviewComponent,
-    CodeMirrorComponent
+    CodeMirrorComponent,
+    MarkedComponent
   ],
   providers: [
   ],

@@ -4,6 +4,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ThemeService } from './theme/theme.service';
 import { SidenavService } from './sidenav/sidenav.service';
 import { CodeMirrorService } from './code-mirror/code-mirror.service';
+import { MarkedService } from './marked/marked.service';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { CodeMirrorService } from './code-mirror/code-mirror.service';
   providers: [
     ThemeService,
     SidenavService,
-    CodeMirrorService
+    CodeMirrorService,
+    MarkedService,
   ],
   exports: [],
 })
