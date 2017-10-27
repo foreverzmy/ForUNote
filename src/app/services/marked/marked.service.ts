@@ -1,6 +1,7 @@
 import { Injectable, OnInit, EventEmitter } from '@angular/core';
 
 import * as Marked from 'marked';
+import * as hljs from 'highlight.js';
 
 @Injectable()
 export class MarkedService {
@@ -13,10 +14,25 @@ export class MarkedService {
     this.init();
   }
 
+  get value() {
+    return this.content;
+  }
+  set value(v) {
+    if (v !== this.content) {
+      this.content = v;
+      // this.updateValue(v);
+    }
+  }
+
   private init() {
     this.renderer = new Marked.Renderer();
     // this.renderer.link = (href, title, text) => this.handleLink(href, title, text);
     // this.renderer.image = (href, title, text) => this.handleImage(href, title, text);
+    this.renderer.code = function (code, language) {
+      return '<pre><code class="hljs ' + language + '">' +
+        hljs.highlight(language, code).value +
+        '</code></pre>';
+    };
     this.config = {
       renderer: this.renderer,
       gfm: true,
@@ -27,14 +43,19 @@ export class MarkedService {
       smartLists: true,
       smartypants: false,
       langPrefix: 'language-',
-      // highlight: this.highlight,
-      // sourceLine: true
     };
     this.marked = Marked.setOptions(this.config);
   }
 
   public parse(text: string) {
     return this.marked.parse(text);
+  }
+
+  // 代码高亮
+  private highlight(code, language) {
+    if (language === 'auto') {
+      return hljs.highlightAuto(code).value;
+    }
   }
 
 }

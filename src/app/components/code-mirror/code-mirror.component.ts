@@ -24,6 +24,7 @@ export class CodeMirrorComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit() {
+    // CodeMirror 配置
     this.config = {
       mode: 'gfm',
       lineNumbers: true, // 行数
@@ -42,8 +43,7 @@ export class CodeMirrorComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.config = this.config || {};
-    // this._service.codemirrorInit(this.host.nativeElement, this.config);
     this._service.editorInit(this.host.nativeElement, this.config);
   }
+
 }

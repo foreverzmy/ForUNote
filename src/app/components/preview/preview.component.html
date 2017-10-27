@@ -1,2 +1,26 @@
-Preview
-<app-marked></app-marked>
+<div class="container">
+
+  <mat-toolbar class="preview-toolbar-wrap" color='accent'>
+    <div class="preview-toolbar">
+      <ul>
+        <li title="阅读模式">
+          <button mat-icon-button>
+            <mat-icon>remove_red_eye</mat-icon>
+          </button>
+        </li>
+      </ul>
+
+      <ul>
+        <li title="查看目录">
+          <button mat-icon-button>
+            <mat-icon>view_list</mat-icon>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar>
+
+  <div class="preview-panel">
+    <app-marked></app-marked>
+  </div>
+</div>

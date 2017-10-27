@@ -4,16 +4,16 @@ html {
 
 html,
 body {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  width: 100vw;
   overflow: hidden;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 :root {
-  overflow-y: hidden;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 :root body {
@@ -93,9 +93,9 @@ audio,
 video {
   margin: 0;
   padding: 0;
+  vertical-align: baseline;
   border: 0;
   outline: 0;
-  vertical-align: baseline;
   background: transparent;
 }
 
@@ -109,8 +109,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  transition-delay: 999999s;
   transition: color 999999s ease-out, background-color 999999s ease-out;
+  transition-delay: 999999s;
 }
 
 // 滚动条整体部分
@@ -127,12 +127,10 @@ input:-webkit-autofill:active {
 
 // 外层轨道
 ::-webkit-scrollbar-track {
-  display: none
+  display: none;
 }
 
 // 内层轨道
-::-webkit-scrollbar-track-piece {}
-
 // 滚动条
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
@@ -140,7 +138,4 @@ input:-webkit-autofill:active {
 }
 
 // 边角
-::-webkit-scrollbar-corner {}
-
 // 右下角拖动块
-::-webkit-resizer {}
