@@ -1,8 +1,6 @@
 import { Injectable, ElementRef, EventEmitter } from '@angular/core';
 
-
 import * as CodeMirror from 'codemirror';
-
 
 @Injectable()
 export class CodeMirrorService {
